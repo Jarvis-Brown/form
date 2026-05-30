@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="page">
+            <div class="image-side">
+                <img
+                    class="side-image"
+                    src="image/halie-west-25xggax4bSA-unsplash.jpg"
+                    alt="image of plant leaves"
+                />
+                <div class="image-shadow"></div>
+                <div class="logo-container">
+                    <img
+                        class="logo"
+                        src="image/odin-lined.png"
+                        alt="odin image"
+                    />
+                    <h1>ODIN</h1>
+                </div>
+            </div>
+            <div class="text-side">
+                <header>
+                    <h3>
+                        This is not a real online service! You know you need
+                        something like this in your life to help you realize
+                        your deepest dreams. Sign up
+                        <i>now</i> to get started.
+                    </h3>
+                    <h3>You know you want to.</h3>
+                </header>
+
+                <form action="/index.html" method="post">
+                    <div class="bg">
+                        <h3>Let's do this!</h3>
+                        <div class="form-all-group">
+                            <div class="form-group">
+                                <label for="first-name">FIRST NAME</label>
+                                <input
+                                    required
+                                    minlength="2"
+                                    type="text"
+                                    id="first-name"
+                                    name="first-name"
+                                />
+                                <label for="email">EMAIL</label>
+                                <input
+                                    type="email"
+                                    required
+                                    id="email"
+                                    name="email"
+                                />
+                                <label for="password">PASSWORD</label>
+                                <input
+                                    required
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                    title="Password must be at least 8 characters and include at least one uppercase letter, one lowercase letter, and one number."
+                                    minlength="8"
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">LAST NAME</label>
+                                <input
+                                    required
+                                    minlength="2"
+                                    type="text"
+                                    id="last-name"
+                                    name="last-name"
+                                />
+                                <label for="number">PHONE NUMBER</label>
+                                <input
+                                    required
+                                    title="Phone number must be in this format: 123-456-7890"
+                                    placeholder="123-123-1234"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    type="tel"
+                                    id="number"
+                                    name="number"
+                                />
+                                <label for="confirm-password">PASSWORD</label>
+                                <input
+                                    required
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                    type="password"
+                                    id="confirm-password"
+                                    name="confirm-password"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit">Create Account</button>
+                </form>
+                <p>Already have an account? Log in</p>
+            </div>
+        </div>
+    </body>
+</html>
